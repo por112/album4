@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>อัลบั้มรูปของฉัน</title>
+<meta name="theme-color" content="#e0567a">
+<meta name="description" content="สร้างและตกแต่งอัลบั้มรูปของคุณเอง ใส่รูป ตกแต่งปก จัดหมวดหมู่ด้วยโฟลเดอร์">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/icons/icon-192.png">
+<link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="อัลบั้มรูป">
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600&family=Kanit:wght@400;600&family=Sriracha&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<section id="v-login"><div class="box center">
+<div style="font-size:3rem">📸</div><h1>อัลบั้มรูปของฉัน</h1>
+<p class="mut">ใส่อีเมลเพื่อเข้าใช้งาน</p>
+<input type="email" id="em" placeholder="you@example.com" autocomplete="email">
+<button class="btn big" style="margin-top:0" id="lg">เข้าสู่ระบบ</button>
+<p class="mut">เวอร์ชันเดโม: ไม่ต้องใช้รหัสผ่านและไม่ส่งอีเมลยืนยัน อัลบั้มถูกเก็บในเบราว์เซอร์นี้ตามอีเมลที่ใช้เข้า</p>
+</div></section>
+
+<section id="v-home">
+<header><h2 id="who"></h2><button id="out">ออกจากระบบ</button></header>
+<div class="menu">
+<button class="btn" id="mNew">✨ สร้างอัลบั้มใหม่</button>
+<button id="mList">📚 อัลบั้มที่เคยสร้าง</button>
+<button id="mTrash">🗑️ ถังขยะ</button>
+</div></section>
+
+<section id="v-list"><header><button class="bk">← กลับ</button><h2>อัลบั้มที่เคยสร้าง</h2></header><div class="row" id="fRow" style="margin-bottom:12px"></div><div class="grid" id="gList"></div></section>
+
+<section id="v-trash"><header><button class="bk">← กลับ</button><h2>ถังขยะ</h2></header><p class="mut">อัลบั้มในถังขยะจะถูกลบถาวรหลังจาก 15 วัน</p><div class="grid" id="gTrash"></div></section>
+
+<section id="v-design">
+<header><button class="bk">← กลับ</button><h2>ตกแต่งอัลบั้ม</h2></header>
+<div class="pvs"><div class="pvc"><div class="cap">ตัวอย่างปก</div><div id="pvC"></div></div><div class="pvc"><div class="cap">ตัวอย่างหน้าในอัลบั้ม</div><div id="pvP"></div></div></div>
+<div id="ctl"></div>
+<button class="btn big" id="go">✨ เริ่มสร้างอัลบั้มของฉัน</button>
+</section>
+
+<section id="v-book"><header><button class="bk">← กลับ</button><h2 id="bt"></h2></header>
+<div class="stage">
+<div class="book" id="book"><div id="pg"></div><div class="cv" id="cv"></div></div>
+<p class="mut" id="hint">👆 แตะที่อัลบั้มเพื่อเปิดปก</p>
+<div class="nav" id="nav" style="display:none"><button id="pp">‹</button><span id="pi"></span><button id="pn">›</button></div>
+<p class="mut" id="prog"></p>
+<div class="acts"><button class="btn" id="keep">💾 เก็บอัลบั้ม</button><button id="trash">🗑️ ทิ้งอัลบั้ม</button></div>
+</div></section>
+
+<input type="file" id="file" accept="image/*" hidden>
+<div id="toast"></div>
+<button id="inst" class="btn" style="display:none;position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));border-radius:24px;z-index:8">⬇️ ติดตั้งแอป</button>
+<script src="js/app.js"></script>
+</body>
+</html>
